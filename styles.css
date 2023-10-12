@@ -294,3 +294,29 @@ header{
     cursor:pointer;
 }
 
+/* Example Media Query for Small Screens */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    .container {
+        flex-direction: column; /* Change layout for smaller screens */
+    }
+
+    .left-container, .right-container {
+        display: none; /* Hide side containers on small screens */
+    }
+    
+    .middle {
+        flex: 1; /* Expand the middle section to fill the available space */
+    }
+
+    .card-name-left, .card-name-right, .card-description {
+        width: 100%; /* Make card elements span the full width */
+    }
+
+    .main-deck, .extra-deck, .side-deck {
+        width: 100%; /* Make card decks span the full width */
+    }
+}
