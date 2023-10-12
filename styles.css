@@ -254,6 +254,13 @@ header{
     margin-right: auto;
 }
 
+.side-deck-card{
+    display: inline-block;
+    object-fit: cover;
+    margin-left: 0.8px;
+    margin-right: auto;
+}
+
 .main-deck-card img{
     height:60px;
     width:40px;
@@ -261,6 +268,12 @@ header{
 }
 
 .extra-deck-card img{
+    height:60px;
+    width:40px;
+    object-fit: cover;
+}
+
+.side-deck-card img{
     height:60px;
     width:40px;
     object-fit: cover;
@@ -276,4 +289,8 @@ header{
     cursor:pointer;
 }
 
+.side-deck-card:hover{
+    border:2px dashed white;
+    cursor:pointer;
+}
 

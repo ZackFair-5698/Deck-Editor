@@ -53,6 +53,7 @@
         const searchResults = document.querySelector('.search-results');
         const mainDeck = document.querySelector('.main-deck');
         const extraDeck = document.querySelector('.extra-deck');
+        const sideDeck = document.querySelector('.side-deck');
 
         // Sample data for demonstration (replace with your actual data)
         const cardData = [
@@ -315,11 +316,86 @@
         mainDeck.addEventListener('dragover', (event) => {
             event.preventDefault();
         });
+        extraDeck.addEventListener('dragover', (event) => {
+        event.preventDefault();
+        });
+
+        sideDeck.addEventListener('dragover', (event) => {
+        event.preventDefault();
+        });
+
+        // Function to handle card drop into the side deck
+function handleSideDeckCardDrop(event) {
+    event.preventDefault();
+
+    // Get the card data from the dropped element
+    const cardData = JSON.parse(event.dataTransfer.getData('text/plain'));
+
+    // Create a new card element for the side deck
+    const sideDeckCard = document.createElement('div');
+    sideDeckCard.classList.add('side-deck-card');
+
+    // Create an <img> element for the card image
+    const cardImage = document.createElement('img');
+    cardImage.src = cardData.image;
+    cardImage.alt = cardData.name;
+
+    // Apply object-fit: cover to the card image
+    cardImage.style.objectFit = 'cover';
+
+    // Add the card image to the side deck card
+    sideDeckCard.appendChild(cardImage);
+
+    // Add the card to the side deck
+    sideDeck.appendChild(sideDeckCard);
+
+    // Add a click event listener to remove the card from the side deck
+    sideDeckCard.addEventListener('click', () => {
+        sideDeck.removeChild(sideDeckCard);
+    });
+    }
+
+// Add an event listener to the side deck for the drop event
+sideDeck.addEventListener('drop', handleSideDeckCardDrop);
+        // Function to handle card drop into the extra deck
+        function handleExtraDeckCardDrop(event) {
+        event.preventDefault();
+
+        // Get the card data from the dropped element
+        const cardData = JSON.parse(event.dataTransfer.getData('text/plain'));
+
+        // Create a new card element for the extra deck
+        const extraDeckCard = document.createElement('div');
+        extraDeckCard.classList.add('extra-deck-card');
+
+         // Create an <img> element for the card image
+        const cardImage = document.createElement('img');
+        cardImage.src = cardData.image;
+        cardImage.alt = cardData.name;
+
+        // Apply object-fit: cover to the card image
+        cardImage.style.objectFit = 'cover';
+
+        // Add the card image to the extra deck card
+        extraDeckCard.appendChild(cardImage);
+
+        // Add the card to the extra deck
+        extraDeck.appendChild(extraDeckCard);
+
+        // Add a click event listener to remove the card from the extra deck
+        extraDeckCard.addEventListener('click', () => {
+        extraDeck.removeChild(extraDeckCard);
+        });
+    }
+
+        // Add an event listener to the extra deck for the drop event
+        extraDeck.addEventListener('drop', handleExtraDeckCardDrop);
 
         // Function to handle card drop
         // Function to handle card drop
         function handleCardDrop(event) {
         event.preventDefault();
+        
 
         // Get the card data from the dropped element
         const cardData = JSON.parse(event.dataTransfer.getData('text/plain'));
