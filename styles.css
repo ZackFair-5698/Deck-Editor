@@ -61,7 +61,7 @@ header{
 
 .right-container {
     overflow-y: scroll; 
-    max-height: 84vh; 
+    max-height: 90vh; 
     padding: -20px;
     background-color: transparent;
     border-left: 1px solid #777777;
@@ -118,7 +118,7 @@ header{
 
 .card-description{
     padding: 8px 0px 0px 8px;
-    height:200px;
+    height:250px;
     width: 270px;
     font-family: Helvetica, sans-serif;
     font-size: 1.5rem;
@@ -165,6 +165,54 @@ header{
     border: 1px solid #777777;
 }
 
+.extra-deck-title{
+    width:440px;
+    height: 45px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Helvetica, sans-serif;
+    color: white;
+    background: hsla(263, 100%, 11%, 0.38); 
+    backdrop-filter: blur(5px); 
+    border: 1px solid #777777;
+}
+.extra-deck{
+    height: 250px;
+    width:430px;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+    border: 1px solid #777777;
+}
+
+.side-deck-title{
+    width:440px;
+    height: 45px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Helvetica, sans-serif;
+    color: white;
+    background: hsla(263, 100%, 11%, 0.38); 
+    backdrop-filter: blur(5px); 
+    border: 1px solid #777777;
+}
+.side-deck{
+    height: 250px;
+    width:430px;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+    border: 1px solid #777777;
+}
+
 .search-result{
     height:80px;
     background-color: #111925;
@@ -199,13 +247,31 @@ header{
     margin-right: auto;
 }
 
+.extra-deck-card{
+    display: inline-block;
+    object-fit: cover;
+    margin-left: 0.8px;
+    margin-right: auto;
+}
+
 .main-deck-card img{
     height:60px;
     width:40px;
     object-fit: cover;
 }
 
+.extra-deck-card img{
+    height:60px;
+    width:40px;
+    object-fit: cover;
+}
+
 .main-deck-card:hover{
+    border:2px dashed white;
+    cursor:pointer;
+}
+
+.extra-deck-card:hover{
     border:2px dashed white;
     cursor:pointer;
 }
