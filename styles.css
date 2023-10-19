@@ -53,18 +53,18 @@ header{
     
 }
 
-.middle {
+.decks {
     flex: 3; 
     padding: 20px;
     background-color: transparent;
 }
 
 .right-container {
-    overflow-y: scroll; 
-    max-height: 90vh; 
+    max-height: 84vh; 
     padding: -20px;
     background-color: transparent;
     border-left: 1px solid #777777;
+    overflow-y: scroll; 
 }
 
 .right {
@@ -118,13 +118,26 @@ header{
 
 .card-description{
     padding: 8px 0px 0px 8px;
-    height:450px;
+    height:150px;
     width: 270px;
     font-family: Helvetica, sans-serif;
     font-size: 1.5rem;
     color: white;
     background-color: #111925;
     border: 1px solid #777777;
+}
+
+.card-type{
+    padding-left: 8px;
+    height:38px;
+    width: 270px;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #111925;
+    border: 1px solid #777777;
+    display: flex;
+    align-items: center;
 }
 
 .search-results{
@@ -140,9 +153,68 @@ header{
     padding-left: 5px;
 }
 
+.search-result{
+    height:80px;
+    background-color: #111925;
+    border: 1px solid #777777;
+}
+
+.search-result:hover{
+    cursor: pointer;
+	background:-webkit-linear-gradient(left, #111925 0%,#777777 50%,#111925 99%,#111925 100%);
+}
+
+.search-result p{
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    margin-left: 40px;
+    margin-top: -40px;
+    font-family: Helvetica, sans-serif;
+}
+
+.search-result img{
+    height:60px;
+    width:40px;
+    object-fit: cover;
+    margin-top: 9px;
+    margin-left: 2px;
+}
+
+.filter-card-type{
+    width: 260px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 10px;
+    margin-left: -16px;
+    margin-bottom: 10px;
+}
+
+.select-card-type{
+    width: 260px;
+    background-color: #111925;
+    color:#777777;
+    padding:3px 0px;
+    font-family: Helvetica, sans-serif;
+}
+
+.select-card-type option:first-child{
+    background-color: #242424;
+    color:grey;
+    font-family: Helvetica, sans-serif;
+}
+
+.select-card-type option{
+    background-color: #111925;
+    color:white;
+    font-family: Helvetica, sans-serif;
+}
+
 .main-deck-title{
+    margin-top: -13px;
     width:440px;
-    height: 45px;
+    height: 40px;
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -163,98 +235,10 @@ header{
     margin-right: auto;
     object-fit: cover;
     border: 1px solid #777777;
-}
-
-.extra-deck-title{
-    width:440px;
-    height: 45px;
-    border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Helvetica, sans-serif;
-    color: white;
-    background: hsla(263, 100%, 11%, 0.38); 
-    backdrop-filter: blur(5px); 
-    border: 1px solid #777777;
-}
-.extra-deck{
-    height:130px;
-    width:430px;
-    margin-left: auto;
-    margin-right: auto;
-    object-fit: cover;
-    border: 1px solid #777777;
-}
-
-.side-deck-title{
-    width:440px;
-    height: 45px;
-    border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Helvetica, sans-serif;
-    color: white;
-    background: hsla(263, 100%, 11%, 0.38); 
-    backdrop-filter: blur(5px); 
-    border: 1px solid #777777;
-}
-.side-deck{
-    height:130px;
-    width:430px;
-    margin-left: auto;
-    margin-right: auto;
-    object-fit: cover;
-    border: 1px solid #777777;
-}
-
-.search-result{
-    height:80px;
-    background-color: #111925;
-    border: 1px solid #777777;
-}
-
-.search-result:hover{
-    cursor: pointer;
-}
-
-.search-result p{
-    color: white;
-    font-size: 2rem;
-    display: flex;
-    margin-left: 40px;
-    margin-top: -40px;
-    font-family: Helvetica, sans-serif;
-}
-
-.search-result img{
-    height:60px;
-    width:40px;
-    object-fit: cover;
-    margin-top: 9px;
-    margin-left: 2px;
+    margin-top: -5px;
 }
 
 .main-deck-card{
-    display: inline-block;
-    object-fit: cover;
-    margin-left: 0.8px;
-    margin-right: auto;
-}
-
-.extra-deck-card{
-    display: inline-block;
-    object-fit: cover;
-    margin-left: 0.8px;
-    margin-right: auto;
-}
-
-.side-deck-card{
     display: inline-block;
     object-fit: cover;
     margin-left: 0.8px;
@@ -267,68 +251,61 @@ header{
     object-fit: cover;
 }
 
-.extra-deck-card img{
-    height:60px;
-    width:40px;
-    object-fit: cover;
-}
-
-.side-deck-card img{
-    height:60px;
-    width:40px;
-    object-fit: cover;
-}
-
 .main-deck-card:hover{
     border:2px dashed white;
     cursor:pointer;
 }
 
-.extra-deck-card:hover{
-    border:2px dashed white;
-    cursor:pointer;
-}
-
-.side-deck-card:hover{
-    border:2px dashed white;
-    cursor:pointer;
-}
-
-.card-custom-type {
-    padding: 8px 0px 0px 8px;
-    height: 40px; /* Set the height according to your design */
-    width: 280px; /* Set the width according to your design */
+.extra-deck-title{
+    margin-top: 8px;
+    width:440px;
+    height: 40px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: Helvetica, sans-serif;
-    font-size: 1.5rem;
     color: white;
-    background-color: #111925;
+    background: hsla(263, 100%, 11%, 0.38); 
+    backdrop-filter: blur(5px); 
     border: 1px solid #777777;
 }
 
+.extra-deck{
+    height: 63px;
+    width:430px;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+    border: 1px solid #777777;
+    margin-top: -5px;
+}
 
-/* Example Media Query for Small Screens */
-@media (max-width: 768px) {
-    body {
-        font-size: 16px; /* Adjust font size for smaller screens */
-    }
+.side-deck-title{
+    margin-top: 8px;
+    width:440px;
+    height: 40px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Helvetica, sans-serif;
+    color: white;
+    background: hsla(263, 100%, 11%, 0.38); 
+    backdrop-filter: blur(5px); 
+    border: 1px solid #777777;
+}
 
-    .container {
-        flex-direction: column; /* Change layout for smaller screens */
-    }
-
-    .left-container, .right-container {
-        display: none; /* Hide side containers on small screens */
-    }
-    
-    .middle {
-        flex: 1; /* Expand the middle section to fill the available space */
-    }
-
-    .card-name-left, .card-name-right, .card-description {
-        width: 100%; /* Make card elements span the full width */
-    }
-
-    .main-deck, .extra-deck, .side-deck {
-        width: 100%; /* Make card decks span the full width */
-    }
+.side-deck{
+    height: 63px;
+    width:430px;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+    border: 1px solid #777777;
+    margin-top: -5px;
 }
