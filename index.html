@@ -37,8 +37,7 @@
                     <h1 class="side-deck-title">Side Deck</h1>
                     <div class="side-deck"> </div>
                 </div>
-
-                <!-- <button id="addCardButton">Add Card</button> -->
+                
             </div>
             <div class="right-container">
                 <div class="right">
@@ -63,9 +62,6 @@
         </div>
     </main>
     <script>
-        // let mainDeckCount = 0;
-        // let extraDeckCount = 0;
-        // let sideDeckCount = 0;
 
         // Get references to the elements
         const leftCardName = document.getElementById('left-card-name');
@@ -78,15 +74,7 @@
         const mainDeck = document.querySelector('.main-deck');
         const extraDeck = document.querySelector('.extra-deck');
         const sideDeck = document.querySelector('.side-deck');
-        
-    // document.getElementById('addCardButton').addEventListener('click', function () {
-        
 
-        
-    //     mainDeckCount++; 
-        
-    //     updateCardCounts();
-    // });
         
 
         // Sample data for demonstration (replace with your actual data)
@@ -383,13 +371,6 @@
             searchCards(query);
         });
 
-    //     // Function to update the card counts
-    //     function updateCardCounts() {
-    //     // Update the card counts in the titles
-    //     document.querySelector('.main-deck-title').textContent = `Main Deck (${mainDeckCount} Cards)`;
-    //     document.querySelector('.extra-deck-title').textContent = `Extra Deck (${extraDeckCount} Cards)`;
-    //     document.querySelector('.side-deck-title').textContent = `Side Deck (${sideDeckCount} Cards)`;
-    // }
         // Initial display of cards (you can remove this if not needed)
         searchCards('');
 

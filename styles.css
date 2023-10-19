@@ -309,3 +309,75 @@ header{
     border: 1px solid #777777;
     margin-top: -5px;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #414141;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #261247; /*CHANGE #1A0C30*/
+    border-radius: 10px;
+    border: 1px solid #777777;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #401e77;
+}
+
+
+/* @media screen and (max-width: 768px) {
+    html, body, .container, header, .title, .left-container, .left, .decks, .right-container, .right, .card-name-left, .card-picture,
+    #left-card-image, .card-name-right, .card-name-right:focus, .card-description,.card-type,.search-results,.search-results p,.search-result
+    
+    
+    ,.search-result:hover
+     
+    
+    ,.search-result p
+     
+    ,.search-result img
+     
+    
+    ,.filter-card-type
+    
+    
+    ,.select-card-type
+    
+    
+    
+    ,.select-card-type option:first-child
+       
+    
+    
+    ,.select-card-type option
+     
+    
+    
+    ,.main-deck-title
+       
+    
+    
+    ,.main-deck
+       
+    
+    
+    ,.main-deck-card
+       
+    
+    
+    ,.main-deck-card img
+      
+    
+    
+    ,.main-deck-card:hover
+       
+    
+    ,.extra-deck-title,.extra-deck,.side-deck-title,.side-deck,::-webkit-scrollbar ,::-webkit-scrollbar-thumb ,::-webkit-scrollbar-thumb:hover 
+        {
+        width: 100%;
+    }
+
+    
+} */
