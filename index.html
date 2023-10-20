@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Embedded Finals</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/images/icon.jpg">
 </head>
 <body>
     <header>
@@ -37,7 +38,6 @@
                     <h1 class="side-deck-title">Side Deck</h1>
                     <div class="side-deck"> </div>
                 </div>
-                
             </div>
             <div class="right-container">
                 <div class="right">
@@ -62,8 +62,6 @@
         </div>
     </main>
     <script>
-
-        // Get references to the elements
         const leftCardName = document.getElementById('left-card-name');
         const leftCardPicture = document.getElementById('left-card-picture');
         const leftCardDescription = document.getElementById('left-card-description');
@@ -74,12 +72,10 @@
         const mainDeck = document.querySelector('.main-deck');
         const extraDeck = document.querySelector('.extra-deck');
         const sideDeck = document.querySelector('.side-deck');
-
         
-
-        // Sample data for demonstration (replace with your actual data)
+        //Database for cards
         const cardData = [
-            {
+        {
                 name: 'Black Luster Soldier',
                 image: 'images/BlackLusterSoldier.png',
                 description: 'The strongest warrior, it has the same capabilities as Blue-Eyes White Dragon.',
@@ -95,13 +91,13 @@
                 name: 'Rabidragon',
                 image: 'images/Rabidragon.png',
                 description: 'It is a snowfield-dwelling, giant-ear-sporting, super-acoustic, snowball-shaped mutant dragon! There is no way anybody can escape.',
-                type: 'Trap',
+                type: 'Monster',
             },
             {
                 name: 'Gogiga Gagagigo',
                 image: 'images/GogigaGagagigo.png',
                 description: 'His soul long-since collapsed, his body recklessly continues onward, driven by a lust for more power. He no longer resembles his former self....',
-                type: 'Trap',
+                type: 'Monster',
             },
             {
                 name: 'Spiral Serpent',
@@ -118,7 +114,7 @@
             {
                 name: 'Slifer the Sky Dragon',
                 image: 'https://yugipedia.com/thumb.php?f=SlifertheSkyDragon-MVP1-EN-UR-LE.png&w=300',
-                description: 'Requires 3 Tributes to Normal Summon (cannot be Normal Set). This cards Normal Summon cannot be negated. When Normal Summoned, cards and effects cannot be activated. Once per turn, during the End Phase, if this card was Special Summoned: Send it to the GY. Gains 1000 ATK/DEF for each card in your hand. If a monster(s) is Normal or Special Summoned to your opponents field in Attack Position: That monster(s) loses 2000 ATK, then if its ATK has been reduced to 0 as a result, destroy it.',
+                description: 'Requires 3 Tributes to Normal Summon (cannot be Normal Set). This cards Normal Summon cannot be negated. When Normal Summoned, cards and effects cannot be activated. Once per turn, during the End Phase, if this card was Special Summoned: Send it to the GY...',
                 type: "Monster",
             },
             {
@@ -190,7 +186,7 @@
             {
                 name: 'Swords of Revealing Light',
                 image: 'https://ms.yugipedia.com//thumb/4/47/SwordsofRevealingLight-LOB-EN-SR-UE-25thAnniversaryEdition.png/300px-SwordsofRevealingLight-LOB-EN-SR-UE-25thAnniversaryEdition.png',
-                description: 'After this cards activation, it remains on the field, but you must destroy it during the End Phase of your opponents 3rd turn. When this card is activated: If your opponent controls a face-down monster, flip all monsters they control face-up. While this card is face-up on the field, your opponents monsters cannot declare an attack.',
+                description: 'After this cards activation, it remains on the field, but you must destroy it during the End Phase of your opponents 3rd turn. When this card is activated: If your opponent controls a face-down monster, flip all monsters they control face-up. While this card is face-up on the field, your opponents...',
                 type: "Spell",
             },
             {
@@ -202,13 +198,13 @@
             {
                 name: 'Obelisk the Tormentor',
                 image: 'https://yugipedia.com/thumb.php?f=ObelisktheTormentor-MVP1-EN-UR-LE.png&w=300',
-                description: 'Requires 3 Tributes to Normal Summon (cannot be Normal Set). This cards Normal Summon cannot be negated. When Normal Summoned, cards and effects cannot be activated. Neither player can target this card with card effects. Once per turn, during the End Phase, if this card was Special Summoned: Send it to the GY. You can Tribute 2 monsters; destroy all monsters your opponent controls. This card cannot declare an attack the turn this effect is activated.',
+                description: 'Requires 3 Tributes to Normal Summon (cannot be Normal Set). This cards Normal Summon cannot be negated. When Normal Summoned, cards and effects cannot be activated. Neither player can target this card with card effects. Once per turn, during the End Phase, if this card was Special... ',
                 type: "Monster",
             },
             {
                 name: 'The Winged Dragon of Ra',
                 image: 'https://yugipedia.com/thumb.php?f=TheWingedDragonofRa-LED7-EN-UR-1E.png&w=300',
-                description: 'Cannot be Special Summoned. Requires 3 Tributes to Normal Summon (cannot be Normal Set). This cards Normal Summon cannot be negated. When Normal Summoned, other cards and effects cannot be activated. When this card is Normal Summoned: You can pay LP so that you only have 100 left; this card gains ATK/DEF equal to the amount of LP paid. You can pay 1000 LP, then target 1 monster on the field; destroy that target.',
+                description: 'Cannot be Special Summoned. Requires 3 Tributes to Normal Summon (cannot be Normal Set). This cards Normal Summon cannot be negated. When Normal Summoned, other cards and effects cannot be activated. When this card is Normal Summoned: You can pay LP so... ',
                 type: "Monster",
             },
             {
@@ -295,7 +291,6 @@
                 description: 'Activate this card by targeting 1 monster your opponent controls; it cannot attack or change its battle position. When that monster is destroyed, destroy this card.',
                 type: "Trap",
             },
-            // Add more card data as needed
         ];
 
         // Function to update the left container with card information
@@ -371,7 +366,7 @@
             searchCards(query);
         });
 
-        // Initial display of cards (you can remove this if not needed)
+        // Initial display of cards
         searchCards('');
 
         function handleCardDrop(event, deck) {
@@ -415,18 +410,20 @@
             event.preventDefault();
         });
 
-  // Add event listeners for the drop event on all decks
-  mainDeck.addEventListener('drop', (event) => handleCardDrop(event, mainDeck));
-  extraDeck.addEventListener('drop', (event) => handleCardDrop(event, extraDeck));
-  sideDeck.addEventListener('drop', (event) => handleCardDrop(event, sideDeck));
+        // Add event listeners for the drop event on all decks
+        mainDeck.addEventListener('drop', (event) => handleCardDrop(event, mainDeck));
+        extraDeck.addEventListener('drop', (event) => handleCardDrop(event, extraDeck));
+        sideDeck.addEventListener('drop', (event) => handleCardDrop(event, sideDeck));
 
-                function updateLeftContainer(card) {
-        leftCardName.textContent = card.name;
-        const leftCardImage = document.getElementById('left-card-image');
-        leftCardImage.src = card.image; // Set the src attribute of the img tag
-        leftCardType.textContent = card.type;
-        leftCardDescription.textContent = card.description;
+        //function to make the clicked card on right container appear info on left container
+        function updateLeftContainer(card) {
+            leftCardName.textContent = card.name;
+            const leftCardImage = document.getElementById('left-card-image');
+            leftCardImage.src = card.image; 
+            leftCardType.textContent = card.type;
+            leftCardDescription.textContent = card.description;
         }
     </script>
 </body>
 </html>
+        

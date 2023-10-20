@@ -13,7 +13,6 @@ body{
     margin:0;
     padding:0;
     scroll-behavior: smooth;
-    
 }
 
 header{
@@ -43,14 +42,12 @@ header{
     background-color: transparent;
     background: hsla(0, 0%, 100%, 0.008); 
     backdrop-filter: blur(5px); 
-    
 }
 
 .left {
     width:310px;
     padding: 20px;
     background-color: transparent;
-    
 }
 
 .decks {
@@ -60,7 +57,7 @@ header{
 }
 
 .right-container {
-    max-height: 84vh; 
+    height: 84vh; 
     padding: -20px;
     background-color: transparent;
     border-left: 1px solid #777777;
@@ -118,7 +115,7 @@ header{
 
 .card-description{
     padding: 8px 0px 0px 8px;
-    height:250px;
+    height:150px;
     width: 270px;
     font-family: Helvetica, sans-serif;
     font-size: 1.5rem;
@@ -326,58 +323,25 @@ header{
     background: #401e77;
 }
 
-
-/* @media screen and (max-width: 768px) {
-    html, body, .container, header, .title, .left-container, .left, .decks, .right-container, .right, .card-name-left, .card-picture,
-    #left-card-image, .card-name-right, .card-name-right:focus, .card-description,.card-type,.search-results,.search-results p,.search-result
-    
-    
-    ,.search-result:hover
-     
-    
-    ,.search-result p
-     
-    ,.search-result img
-     
-    
-    ,.filter-card-type
-    
-    
-    ,.select-card-type
-    
-    
-    
-    ,.select-card-type option:first-child
-       
-    
-    
-    ,.select-card-type option
-     
-    
-    
-    ,.main-deck-title
-       
-    
-    
-    ,.main-deck
-       
-    
-    
-    ,.main-deck-card
-       
-    
-    
-    ,.main-deck-card img
-      
-    
-    
-    ,.main-deck-card:hover
-       
-    
-    ,.extra-deck-title,.extra-deck,.side-deck-title,.side-deck,::-webkit-scrollbar ,::-webkit-scrollbar-thumb ,::-webkit-scrollbar-thumb:hover 
-        {
-        width: 100%;
+@media (max-width: 768px) {
+    .left-container, .right-container {
+        border-left: none; 
+        padding: 20px; 
+        width: 100%; 
+        display: grid;
+        justify-content: center;
     }
 
+    .container{
+        flex-direction: column;
+    }
+
+    .decks {
+        flex: 1; 
+        padding: 20px; 
+    }
     
-} */
+    .main-deck, .extra-deck, .side-deck {
+        width: 100%; 
+    }
+}
